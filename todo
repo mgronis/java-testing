@@ -1,9 +1,14 @@
+- Main parts
 parametrized tests
 custom hamcreast matchers
 custom mockito argument matchers
 mockito junit runner
-@Mock vs. @MockBean
 
+- Mockito
+@Mock vs. @MockBean
+BDDMockito.given vs. Mockito.when
+
+- Other frameworks
 restassured
 testng
 
