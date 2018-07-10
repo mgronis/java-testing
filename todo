@@ -2,6 +2,7 @@
 parametrized tests
 custom hamcreast matchers
 custom mockito argument matchers
+ClassRule vs. Rule
 mockito junit runner
 
 - Mockito
