@@ -1,11 +1,11 @@
-package assertj;
+package assertj.domain;
 
 import org.junit.Test;
 
 import java.awt.*;
 
 import static domain.Car.VOLVO;
-import static org.assertj.core.api.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CarTest {
 

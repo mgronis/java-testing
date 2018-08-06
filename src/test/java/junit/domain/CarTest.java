@@ -1,4 +1,4 @@
-package junit;
+package junit.domain;
 
 import org.junit.Test;
 

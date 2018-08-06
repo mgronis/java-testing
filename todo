@@ -1,7 +1,7 @@
 - Main parts
-parametrized tests
 custom hamcreast matchers
 custom mockito argument matchers
+parametrized tests
 ClassRule vs. Rule
 mockito junit runner
 
