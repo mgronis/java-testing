@@ -1,5 +1,8 @@
-package domain.presentation;
+package domain.presentation.a;
 
+import domain.presentation.a.Bike;
+import domain.presentation.a.Breaks;
+import domain.presentation.a.Frame;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -12,23 +15,21 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
 @RunWith(Parameterized.class)
-public class BikeParametrized2Test {
+public class BikeParametrizedTest {
 
-    @Parameterized.Parameters(name = "{0}")
+    @Parameterized.Parameters
     public static Collection<Object[]> data(){
         return Arrays.asList(new Object[][]{
-                { "Green", createBike(Color.GREEN), Color.GREEN },
-                { "Blue", createBike(Color.BLUE), Color.BLUE },
-                { "Red", createBike(Color.RED), Color.RED }
+                { createBike(Color.GREEN), Color.GREEN },
+                { createBike(Color.BLUE), Color.BLUE },
+                { createBike(Color.RED), Color.RED }
         });
     }
 
-    private final String name;
     private final Bike bike;
     private final Color expectedColor;
 
-    public BikeParametrized2Test(String name, Bike bike, Color expectedColor) {
-        this.name = name;
+    public BikeParametrizedTest(Bike bike, Color expectedColor) {
         this.bike = bike;
         this.expectedColor = expectedColor;
     }

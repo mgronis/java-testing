@@ -1,5 +1,8 @@
-package domain.presentation;
+package domain.presentation.a;
 
+import domain.presentation.a.Bike;
+import domain.presentation.a.Breaks;
+import domain.presentation.a.Frame;
 import lombok.Value;
 import org.assertj.core.util.Lists;
 import org.junit.Test;

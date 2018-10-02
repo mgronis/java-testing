@@ -1,11 +1,11 @@
-package domain.presentation;
+package domain.presentation.a;
 
 public class BikeService {
 
-    private final TyprePump pump;
+    private final TyrePump pump;
     private final GreaseGun greaseGun;
 
-    public BikeService(TyprePump pump, GreaseGun greaseGun) {
+    public BikeService(TyrePump pump, GreaseGun greaseGun) {
         this.pump = pump;
         this.greaseGun = greaseGun;
     }

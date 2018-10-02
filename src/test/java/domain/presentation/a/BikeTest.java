@@ -1,13 +1,14 @@
-package domain.presentation;
+package domain.presentation.a;
 
+import domain.presentation.a.Bike;
 import org.assertj.core.util.Lists;
 import org.hamcrest.CustomTypeSafeMatcher;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static domain.presentation.Breaks.MECHANIC;
-import static domain.presentation.Frame.STEEL;
+import static domain.presentation.a.Breaks.MECHANIC;
+import static domain.presentation.a.Frame.STEEL;
 import static java.awt.Color.BLUE;
 import static org.hamcrest.CoreMatchers.both;
 import static org.hamcrest.CoreMatchers.either;
