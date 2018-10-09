@@ -14,3 +14,12 @@ BDDMockito.given vs. Mockito.when
 restassured
 testng
 
+
+== Examples of Parametrized
+request - OriginLink
+location - CreateBody
+product - GetSubCategoryInteg
+product - CreateBody
+
+== SpringBoot and Parametrized
+product - GetSubCategoryInteg
