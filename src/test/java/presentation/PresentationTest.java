@@ -57,91 +57,98 @@ public class PresentationTest {
     public void testServeUserWithJson0(){
         String result = service.serveUserWithJson("Sten");
 
-        assertTrue(result.equals("{ \"user\":\"Sten\"}"));
+        assertTrue(result.equals("{\"user\":\"Sten\"}"));
     }
 
     @Test
     public void testServeUserWithJson1(){
         String result = service.serveUserWithJson("Gurra");
 
-        assertTrue(result.equals("{ \"user\":\"Gurra\"}"));
+        assertTrue(result.equals("{\"user\":\"Gurra\"}"));
     }
 
     @Test
     public void testServeUserWithJson2(){
         String result = service.serveUserWithJson("Lisa");
 
-        assertTrue(result.equals("{ \"user\":\"Lisa\"}"));
+        assertTrue(result.equals("{\"user\":\"Lisa\"}"));
     }
 
     @Test
     public void testServeUserWithJson3(){
         String result = service.serveUserWithJson("Natasha");
 
-        assertTrue(result.equals("{ \"user\":\"Natasha\"}"));
+        assertTrue(result.equals("{\"user\":\"Natasha\"}"));
     }
 
     @Test
     public void testServeUserWithJson4(){
         String result = service.serveUserWithJson("Bengt");
 
-        assertTrue(result.equals("{ \"user\":\"Bengt\"}"));
+        assertTrue(result.equals("{\"user\":\"Bengt\"}"));
     }
 
     @Test
     public void testServeUserWithJson5(){
         String result = service.serveUserWithJson("Olle");
 
-        assertTrue(result.equals("{ \"user\":\"Olle\"}"));
+        assertTrue(result.equals("{\"user\":\"Olle\"}"));
     }
 
     @Test
     public void testServeUserWithJson6(){
         String result = service.serveUserWithJson("Elin");
 
-        assertTrue(result.equals("{ \"user\":\"Elin\"}"));
+        assertTrue(result.equals("{\"user\":\"Elin\"}"));
     }
 
     @Test
     public void testServeUserWithJson7(){
         String result = service.serveUserWithJson("Ralf");
 
-        assertTrue(result.equals("{ \"user\":\"Ralf\"}"));
+        assertTrue(result.equals("{\"user\":\"Ralf\"}"));
     }
 
     @Test
     public void testServeUserWithJson8(){
         String result = service.serveUserWithJson("Josefin");
 
-        assertTrue(result.equals("{ \"user\":\"Josefin\"}"));
+        assertTrue(result.equals("{\"user\":\"Josefin\"}"));
     }
 
     @Test
     public void testServeUserWithJson9(){
         String result = service.serveUserWithJson("Jenny");
 
-        assertTrue(result.equals("{ \"user\":\"Jenny\"}"));
+        assertTrue(result.equals("{\"user\":\"Jenny\"}"));
     }
 
     @Test
     public void testServeUserWithJson10(){
-        String result = service.serveUserWithJson("Sten");
+        String result = service.serveUserWithJson("Ellen");
 
-        assertTrue(result.equals("{ \"user\":\"Sten\"}"));
+        assertTrue(result.equals("{\"user\":\"Ellen\"}"));
     }
 
     @Test
     public void testServeUserWithJson11(){
-        String result = service.serveUserWithJson("Sten");
+        String result = service.serveUserWithJson("Per");
 
-        assertTrue(result.equals("{ \"user\":\"Sten\"}"));
+        assertTrue(result.equals("{\"user\":\"Per\"}"));
     }
 
     @Test
     public void testServeUserWithJson12(){
-        String result = service.serveUserWithJson("Sten");
+        String result = service.serveUserWithJson("Oscar");
 
-        assertTrue(result.equals("{ \"user\":\"Sten\"}"));
+        assertTrue(result.equals("{\"user\":\"Oscar\"}"));
+    }
+
+    @Test
+    public void testServeUserWithJson13(){
+        String result = service.serveUserWithJson("Lisa");
+
+        assertTrue(result.equals("{\"user\":\"Lisa\"}"));
     }
 
 }
