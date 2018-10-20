@@ -1,6 +1,5 @@
 package domain.presentation.a;
 
-import domain.presentation.a.Bike;
 import org.assertj.core.util.Lists;
 import org.hamcrest.CustomTypeSafeMatcher;
 import org.junit.Test;
@@ -35,6 +34,23 @@ public class BikeTest {
         assertTrue(BIKE.getBrand().equals("Acme Inc"));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void secondBike(){
         assertThat(BIKE.getNoOfGears(), is(3));
@@ -43,6 +59,30 @@ public class BikeTest {
         assertThat(BIKE.getColor(), is(BLUE));
         assertThat(BIKE.getBrand(), is("Acme Inc"));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Test
     public void firstMatchers(){
@@ -55,29 +95,128 @@ public class BikeTest {
         assertThat(LIST, hasItems("lass", "Kula"));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void secondMatchers(){
         assertThat(LIST, both(hasItem("glass")).and(not(hasItem("Olle"))));
         assertThat(LIST, either(hasItem("Lisa")).or(hasItem("Kalle")));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void firstCustomMatchers(){
         assertThat(BIKE, is(new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc")));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Test
     public void secondCustomMatchers(){
         assertThat(BIKE, is(expectedBike()));
     }
 
+    private Bike expectedBike() {
+        return new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Test
     public void thirdCustomMatchers(){
         assertThat(BIKE, isStandardBike());
-    }
-
-    private Bike expectedBike() {
-        return new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
     }
 
     private CustomTypeSafeMatcher<Bike> isStandardBike() {

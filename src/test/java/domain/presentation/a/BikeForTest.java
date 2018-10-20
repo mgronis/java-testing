@@ -1,8 +1,5 @@
 package domain.presentation.a;
 
-import domain.presentation.a.Bike;
-import domain.presentation.a.Breaks;
-import domain.presentation.a.Frame;
 import lombok.Value;
 import org.assertj.core.util.Lists;
 import org.junit.Test;
@@ -36,17 +33,25 @@ public class BikeForTest {
         assertThat(bike.getColor(), is(Color.RED));
     }
 
+    private Bike createBike(Color color) {
+        return new Bike(3, Breaks.MECHANIC, Frame.STEEL, color, "Scott");
+    }
+
+
+
+
+
+
     @Test
     public void manyBikes() {
-        Collection<Tuple> data = Lists.newArrayList(new Tuple(createBike(Color.GREEN), Color.GREEN), new Tuple(createBike(Color.BLUE), Color.BLUE), new Tuple(createBike(Color.RED), Color.RED));
+        Collection<Tuple> data = Lists.newArrayList(
+                new Tuple(createBike(Color.GREEN), Color.GREEN),
+                new Tuple(createBike(Color.BLUE), Color.BLUE),
+                new Tuple(createBike(Color.RED), Color.RED));
 
         for (Tuple item : data) {
             assertThat(item.getBike().getColor(), is(item.getExpectedColor()));
         }
-    }
-
-    private Bike createBike(Color color) {
-        return new Bike(3, Breaks.MECHANIC, Frame.STEEL, color, "Scott");
     }
 
     @Value
@@ -54,5 +59,22 @@ public class BikeForTest {
         private final Bike bike;
         private final Color expectedColor;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

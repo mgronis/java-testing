@@ -1,8 +1,5 @@
 package domain.presentation.a;
 
-import domain.presentation.a.Bike;
-import domain.presentation.a.Breaks;
-import domain.presentation.a.Frame;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
@@ -17,6 +14,35 @@ import static org.junit.Assert.assertThat;
 @RunWith(Parameterized.class)
 public class BikeParametrizedTest {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Parameterized.Parameters
     public static Collection<Object[]> data(){
         return Arrays.asList(new Object[][]{
@@ -26,6 +52,28 @@ public class BikeParametrizedTest {
         });
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private final Bike bike;
     private final Color expectedColor;
 
@@ -33,6 +81,28 @@ public class BikeParametrizedTest {
         this.bike = bike;
         this.expectedColor = expectedColor;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Test
     public void colorOfBike() {
@@ -42,5 +112,24 @@ public class BikeParametrizedTest {
     private static Bike createBike(Color color) {
         return new Bike(3, Breaks.MECHANIC, Frame.STEEL, color, "Scott");
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
