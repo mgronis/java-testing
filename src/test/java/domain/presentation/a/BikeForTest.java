@@ -36,10 +36,6 @@ public class BikeForTest {
         assertThat(bike.getColor(), is(Color.RED));
     }
 
-    private Bike createBike(Color color) {
-        return new Bike(3, Breaks.MECHANIC, Frame.STEEL, color, "Scott");
-    }
-
     @Test
     public void manyBikes() {
         Collection<Tuple> data = Lists.newArrayList(new Tuple(createBike(Color.GREEN), Color.GREEN), new Tuple(createBike(Color.BLUE), Color.BLUE), new Tuple(createBike(Color.RED), Color.RED));
@@ -47,6 +43,10 @@ public class BikeForTest {
         for (Tuple item : data) {
             assertThat(item.getBike().getColor(), is(item.getExpectedColor()));
         }
+    }
+
+    private Bike createBike(Color color) {
+        return new Bike(3, Breaks.MECHANIC, Frame.STEEL, color, "Scott");
     }
 
     @Value

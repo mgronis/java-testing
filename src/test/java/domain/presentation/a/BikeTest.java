@@ -23,7 +23,7 @@ import static org.junit.Assert.assertTrue;
 
 public class BikeTest {
 
-    public static final Bike BIKE = new Bike(3, MECHANIC, STEEL, BLUE, "Acme inc");
+    public static final Bike BIKE = new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
     public static final ArrayList<String> LIST = Lists.newArrayList("Kalle", "Kula", "äter", "glass", "i", "stora", "lass");
 
     @Test
@@ -63,7 +63,7 @@ public class BikeTest {
 
     @Test
     public void firstCustomMatchers(){
-        assertThat(BIKE, is(new Bike(3, MECHANIC, STEEL, BLUE, "Acme inc")));
+        assertThat(BIKE, is(new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc")));
     }
 
     @Test
@@ -71,17 +71,17 @@ public class BikeTest {
         assertThat(BIKE, is(expectedBike()));
     }
 
-    private Bike expectedBike() {
-        return new Bike(3, MECHANIC, STEEL, BLUE, "Acme inc");
-    }
-
     @Test
     public void thirdCustomMatchers(){
         assertThat(BIKE, isStandardBike());
     }
 
+    private Bike expectedBike() {
+        return new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
+    }
+
     private CustomTypeSafeMatcher<Bike> isStandardBike() {
-        Bike bike = new Bike(3, MECHANIC, STEEL, BLUE, "Acme i nc");
+        Bike bike = new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
         return new CustomTypeSafeMatcher<Bike>("Bike without manufacturing date") {
             @Override
             protected boolean matchesSafely(Bike item) {

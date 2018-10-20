@@ -32,11 +32,21 @@ public class BikeServiceTest {
     @Test
     public void secondArgumentMatchers(){
         when(service.standardService(with(GARRY))).thenReturn(true);
-
+        
         boolean result = service.standardService(GARRY);
 
         assertThat(result, is(true));
         verify(service).standardService(with(GARRY));
+    }
+
+    @Test
+    public void thirdArgumentMatchers(){
+        when(service.standardService(argThat(withBike(GARRY)))).thenReturn(true);
+
+        boolean result = service.standardService(GARRY);
+
+        assertThat(result, is(true));
+        verify(service).standardService(argThat(withBike(GARRY)));
     }
 
     public <T extends Bike> T with(T bike){
@@ -52,16 +62,6 @@ public class BikeServiceTest {
                     }
                 });
         return bike;
-    }
-
-    @Test
-    public void thirdArgumentMatchers(){
-        when(service.standardService(argThat(withBike(GARRY)))).thenReturn(true);
-
-        boolean result = service.standardService(GARRY);
-
-        assertThat(result, is(true));
-        verify(service).standardService(argThat(withBike(GARRY)));
     }
 
     public ArgumentMatcher<Bike> withBike(Bike bike) {

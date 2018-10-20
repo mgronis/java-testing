@@ -19,13 +19,22 @@ import static org.mockito.Mockito.when;
 @RunWith(Parameterized.class)
 public class FancyServiceParametrizedTest {
 
-    @Parameters
-    public static Collection<Object[]> data(){
-        return Arrays.asList(new Object[][]{{}});
-    }
-
     @Mock
     private FancyService service;
+
+    private final String expected;
+
+    @Parameters
+    public static Collection<Object[]> data(){
+        return Arrays.asList(new Object[][]
+                {
+                        {"Nice!!"}
+                });
+    }
+
+    public FancyServiceParametrizedTest(String expected) {
+        this.expected = expected;
+    }
 
     @Before
     public void setup(){
@@ -35,7 +44,7 @@ public class FancyServiceParametrizedTest {
 
     @Test
     public void t(){
-        assertThat(service.doFancyStuff(), is("Nice!!"));
+        assertThat(service.doFancyStuff(), is(expected));
     }
 
 }
