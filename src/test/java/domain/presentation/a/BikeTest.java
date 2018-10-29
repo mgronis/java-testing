@@ -2,6 +2,7 @@ package domain.presentation.a;
 
 import org.assertj.core.util.Lists;
 import org.hamcrest.CustomTypeSafeMatcher;
+import org.hamcrest.Matcher;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -27,7 +28,7 @@ public class BikeTest {
 
     @Test
     public void firstBike(){
-        assertTrue(BIKE.getNoOfGears() == 3);
+        assertTrue(BIKE.getNoOfGears() == 30);
         assertTrue(BIKE.getBreaks() == MECHANIC);
         assertTrue(BIKE.getFrame() == STEEL);
         assertTrue(BIKE.getColor() == BLUE);
@@ -53,7 +54,7 @@ public class BikeTest {
 
     @Test
     public void secondBike(){
-        assertThat(BIKE.getNoOfGears(), is(3));
+        assertThat(BIKE.getNoOfGears(), is(30));
         assertThat(BIKE.getBreaks(), is(MECHANIC));
         assertThat(BIKE.getFrame(), is(STEEL));
         assertThat(BIKE.getColor(), is(BLUE));
@@ -185,11 +186,11 @@ public class BikeTest {
 
     @Test
     public void secondCustomMatchers(){
-        assertThat(BIKE, is(expectedBike()));
+        assertThat(BIKE, isBike(new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc")));
     }
 
-    private Bike expectedBike() {
-        return new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
+    private Matcher<Bike> isBike(Bike bike) {
+        return is(bike);
     }
 
 
@@ -219,7 +220,7 @@ public class BikeTest {
         assertThat(BIKE, isStandardBike());
     }
 
-    private CustomTypeSafeMatcher<Bike> isStandardBike() {
+    private Matcher<Bike> isStandardBike() {
         Bike bike = new Bike(3, MECHANIC, STEEL, BLUE, "Acme Inc");
         return new CustomTypeSafeMatcher<Bike>("Bike without manufacturing date") {
             @Override

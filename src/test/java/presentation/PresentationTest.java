@@ -150,7 +150,7 @@ public class PresentationTest {
 
         assertTrue(result.equals("{\"user\":\"Lisa\"}"));
     }
-    
+
     @Test
     public void testServeUserWithJson14(){
         String result = service.serveUserWithJson("Nisse");
