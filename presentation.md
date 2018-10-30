@@ -43,8 +43,8 @@
             1. there are a bunch of them but __TypeSafeMatcher__ sounds promising
             1. __CustomTypeSafeMatcher__ sounds like the one we want
             1. we need to provide a description and an implementation of how the matching is preformed
-            1. lets look a an already finnished implemenation
-        1. finnished custom matcher
+            1. lets look a an already finished implementation
+        1. finished custom matcher
             1. this is what a finnshed matcher can look like
             1. usually the matcher uses _toString_ to print the item but that can be overridden
     1. __a.BikeServiceTest__
