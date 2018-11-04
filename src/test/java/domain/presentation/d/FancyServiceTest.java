@@ -16,6 +16,44 @@ public class FancyServiceTest {
     @Mock
     private FancyService service;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Before
     public void setup(){
         when(service.doFancyStuff()).thenReturn("Nice!!");

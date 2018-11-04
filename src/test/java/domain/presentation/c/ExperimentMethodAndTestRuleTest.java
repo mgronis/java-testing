@@ -13,24 +13,6 @@ import static org.junit.Assert.assertTrue;
 
 public class ExperimentMethodAndTestRuleTest {
 
-    @Rule
-    public final MyFirstRule first = new MyFirstRule();
-
-    @Rule
-    public final MySecondRule second = new MySecondRule();
-
-    @Test
-    public void t1(){
-        System.out.println("Test 1...");
-        assertTrue(true);
-    }
-
-    @Test
-    public void t2(){
-        System.out.println("Test 2...");
-        assertTrue(true);
-    }
-
     private static class MyFirstRule implements TestRule {
 
         @Override
@@ -49,6 +31,24 @@ public class ExperimentMethodAndTestRuleTest {
             return base;
         }
 
+    }
+
+    @Rule
+    public final MyFirstRule first = new MyFirstRule();
+
+    @Rule
+    public final MySecondRule second = new MySecondRule();
+
+    @Test
+    public void t1(){
+        System.out.println("Test 1...");
+        assertTrue(true);
+    }
+
+    @Test
+    public void t2(){
+        System.out.println("Test 2...");
+        assertTrue(true);
     }
 
 }

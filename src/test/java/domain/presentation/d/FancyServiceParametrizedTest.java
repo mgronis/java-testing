@@ -24,6 +24,44 @@ public class FancyServiceParametrizedTest {
 
     private final String expected;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Parameters
     public static Collection<Object[]> data(){
         return Arrays.asList(new Object[][]
@@ -36,6 +74,49 @@ public class FancyServiceParametrizedTest {
         this.expected = expected;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Before
     public void setup(){
         MockitoAnnotations.initMocks(this);
@@ -46,5 +127,34 @@ public class FancyServiceParametrizedTest {
     public void t(){
         assertThat(service.doFancyStuff(), is(expected));
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
 }
