@@ -54,8 +54,4 @@ public class ResultParametrizedTest {
         assertThat(result, is(jsonResult));
     }
 
-    private String userJson(String user) {
-        return "{\"user\":\"" + user + "\"}";
-    }
-
 }
