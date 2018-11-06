@@ -20,7 +20,7 @@ public class BikeServiceTest {
 
     @Test
     public void firstArgumentMatchers(){
-        when(service.standardService(with(GARRY))).thenReturn(true);
+        when(service.standardService(eq(GARRY))).thenReturn(true);
 
         Bike secondGarry = new Bike(1, Breaks.MECHANIC, Frame.STEEL, Color.BLUE, "Garry");
         boolean result = service.standardService(secondGarry);
