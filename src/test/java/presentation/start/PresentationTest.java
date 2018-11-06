@@ -1,4 +1,4 @@
-package presentation;
+package presentation.start;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -14,29 +14,19 @@ import static org.mockito.Mockito.*;
 
 public class PresentationTest {
 
-    private static GenericService genericService;
+    private GenericService genericService;
+    private AnotherGenericService service = new UserJsonService();
 
-    private AnotherGenericService service;
-
-    @BeforeClass
-    public static void setupClass(){
+    @Before
+    public void setup(){
         genericService = mock(GenericService.class);
 
         when(genericService.doSomeThing()).thenThrow(new RuntimeException("Nope!"));
     }
 
-    @Before
-    public void setup(){
-        service = mock(AnotherGenericService.class);
-
-        when(service.valiedUserInput(eq("Sven"), eq(Color.BLUE), eq(101.2))).thenThrow(new IllegalArgumentException("Försök inte!"));
-        when(service.valiedUserInput(eq("Lena"), eq(Color.RED), eq(1.22345))).thenReturn(true);
-        when(service.valiedUserInput(eq("Ulla"), eq(Color.GREEN), eq(11.6678709))).thenThrow(new IllegalArgumentException("Försök inte!"));
-    }
-
     @Test
-    public void test1(){
-        when(service.serveUserWithJson("Steve med Lloyden")).thenReturn("Fräsige värre");
+    public void calculationResults(){
+        when(genericService.calculate(eq(service))).thenReturn(new CalculationResponse());
 
         CalculationResponse calculationResponse = genericService.calculate(service);
 

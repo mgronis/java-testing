@@ -1,4 +1,6 @@
-package presentation;
+package presentation.start;
+
+import org.assertj.core.util.Lists;
 
 import java.util.Collection;
 
@@ -9,10 +11,10 @@ public class CalculationResponse {
     }
 
     public String getStatus() {
-        return null;
+        return "OK!";
     }
 
     public Collection<String> getParts() {
-        return null;
+        return Lists.newArrayList("First result", "Second result");
     }
 }

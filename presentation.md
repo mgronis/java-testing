@@ -107,7 +107,7 @@
         1. this one allowes us to annotatio a vcariable that we want ot be a mock
         1. runner will do mock=mock(FancyService.class) for us
         1. this might make the code a bit clearer for us
-        1. what if we want to user the @Mocke in a data driven test
+        1. what if we want to user the @Mock in a data driven test
     1. __d.FancyServiceParametrizedTest__
         1. then we need to alter the test a bit
         1. we need to use the Parametrized runner for this to work
@@ -116,4 +116,11 @@
     1. what about the SpringJUnit4ClassRunner in combination with parametrized and/or mockito runner
         1. there is a SpringClassRule and a SpringMethodRule for that 
         1. __product - GetSubCategoryIntegrationTest__
-    
+1. Conclusion
+    1. what we started with can now look like this
+1. Key take aways
+    1. macthers can make your test easier to understand
+    1. parametrized test can help a lot, but use them responsibly
+    1. rules can be helpful with your setup
+    1. the mockito runner helps you to focus on the important parts of mocking
+    1. you can combine all of these features at the same time in a test, but please don't
