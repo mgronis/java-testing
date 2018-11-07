@@ -39,4 +39,5 @@ public class PaintShopTest {
     public void shop() {
         assertThat(buyFancyColour(colour), expected);
     }
+
 }

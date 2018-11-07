@@ -23,6 +23,29 @@ public class ExperimentMethodAndTestRuleTest {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private static class MySecondRule implements MethodRule {
 
         @Override
@@ -33,11 +56,64 @@ public class ExperimentMethodAndTestRuleTest {
 
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Rule
     public final MyFirstRule first = new MyFirstRule();
 
     @Rule
     public final MySecondRule second = new MySecondRule();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Test
     public void t1(){
@@ -50,5 +126,27 @@ public class ExperimentMethodAndTestRuleTest {
         System.out.println("Test 2...");
         assertTrue(true);
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }

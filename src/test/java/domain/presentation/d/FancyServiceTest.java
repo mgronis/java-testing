@@ -64,4 +64,23 @@ public class FancyServiceTest {
         assertThat(service.doFancyStuff(), is("Nice!!"));
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
